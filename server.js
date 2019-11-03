@@ -3,6 +3,8 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.use(express.static(path.join(__dirname, "frontend/build")));
+
 app.get("/api/products", (req, res) => {
   res.json([
     { id: 1, name: "Laptop", price: 3000 },
