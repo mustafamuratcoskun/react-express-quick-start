@@ -9,6 +9,7 @@
     "client-install": "npm install --prefix frontend",
     "backend": "nodemon server.js",
     "frontend": " npm run start --prefix ./frontend",
+    "heroku-postbuild": "cd frontend && npm install && npm run build",
     "full": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "author": "",
